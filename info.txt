@@ -1,0 +1,362 @@
+STUDIO RACINE — FICHES DE PRODUCTION DES IMAGES
+================================================
+Community manager Clara Morin — Landing page de conversion
+Fichier généré pour accompagner index.html et style.css
+================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 01
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : logo-studio-racine.svg
+RÔLE DANS LA PAGE    : Logo principal du studio — visible dans le header sur fond clair
+SECTION              : Header
+FORMAT               : Horizontal, compact
+DIMENSIONS           : 320 × 80 px (fichier SVG — vectoriel)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — SVG à créer manuellement ou via outil (Figma, Illustrator)
+NOTES                : Le logo doit fonctionner sur fond sable (#F2EAD8). Proposition typographique :
+                       mot "Studio" en DM Sans léger, mot "Racine" en Playfair Display italic.
+                       Optionnellement une feuille stylisée ou une racine en pictogramme simple.
+                       Couleur principale : #2C3D2E (vert forêt). Accent possible : #B94F2A (rouille).
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 02
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : hero-banner.jpg
+RÔLE DANS LA PAGE    : Image de fond du Hero — première impression du site, installe l'univers
+SECTION              : Hero
+FORMAT               : Paysage, ratio 16:9
+DIMENSIONS           : 1440 × 810 px minimum (2880 × 1620 px recommandé pour les écrans Retina)
+EXTENSION            : .jpg (qualité 85)
+PROMPT DE GÉNÉRATION :
+  "Photographie lifestyle éditoriale, lumière naturelle dorée de fin de matinée, atelier artisanal
+  lumineux, mains travaillant la matière (argile ou farine ou fibre textile), plans de travail en bois
+  brut, tonalités chaudes sable et vert olive, grain argentique subtil, profondeur de champ, bokeh
+  doux en arrière-plan, format horizontal 16:9, sans texte, sans logo."
+NOTES                : Image la plus critique du site. Doit fonctionner avec un texte blanc superposé
+                       sur la moitié gauche. Éviter les zones trop lumineuses à gauche. L'overlay CSS
+                       (gradient sombre) assure la lisibilité mais l'image doit rester reconnaissable.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 03
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : logo-client-01.svg
+RÔLE DANS LA PAGE    : Logo client fictif — bande de preuve sociale
+SECTION              : Logos / preuve sociale
+FORMAT               : Horizontal compact
+DIMENSIONS           : 280 × 96 px (vectoriel SVG)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — SVG à créer manuellement
+NOTES                : Représente "Moulin des Terres" — minoterie artisanale.
+                       Style : typographique, serif ou script, avec une meule stylisée.
+                       Affiché en nuances de gris (filter: grayscale via CSS), couleur au survol.
+                       Doit être lisible à 40px de hauteur.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 04
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : logo-client-02.svg
+RÔLE DANS LA PAGE    : Logo client fictif — bande de preuve sociale
+SECTION              : Logos / preuve sociale
+FORMAT               : Horizontal compact
+DIMENSIONS           : 280 × 96 px (vectoriel SVG)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — SVG à créer manuellement
+NOTES                : Représente "Atelier Borie" — céramiste.
+                       Style : épuré, avec une silhouette de vase ou de main modelant.
+                       Même contraintes de lisibilité que logo-client-01.svg.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 05
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : logo-client-03.svg
+RÔLE DANS LA PAGE    : Logo client fictif — bande de preuve sociale
+SECTION              : Logos / preuve sociale
+FORMAT               : Horizontal compact
+DIMENSIONS           : 280 × 96 px (vectoriel SVG)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — SVG à créer manuellement
+NOTES                : Représente "La Ferme du Merle" — maraîchage biologique.
+                       Style : naturaliste, avec une silhouette végétale ou oiseau stylisé.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 06
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : logo-client-04.svg
+RÔLE DANS LA PAGE    : Logo client fictif — bande de preuve sociale
+SECTION              : Logos / preuve sociale
+FORMAT               : Horizontal compact
+DIMENSIONS           : 280 × 96 px (vectoriel SVG)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — SVG à créer manuellement
+NOTES                : Représente "Brasserie Sauvage" — bières artisanales.
+                       Style : vintage industriel doux, avec hop (houblon) stylisé ou cuve.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 07
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : logo-client-05.svg
+RÔLE DANS LA PAGE    : Logo client fictif — bande de preuve sociale
+SECTION              : Logos / preuve sociale
+FORMAT               : Horizontal compact
+DIMENSIONS           : 280 × 96 px (vectoriel SVG)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — SVG à créer manuellement
+NOTES                : Représente "Tisannerie Clairmont" — plantes et infusions.
+                       Style : botanique, avec tige ou feuille fine stylisée, typographie elégante.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 08
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : solution-ambiance.jpg
+RÔLE DANS LA PAGE    : Image illustrant la section "Ce que je fais" — ancrage visuel de la méthode
+SECTION              : Solution / Offre
+FORMAT               : Portrait, ratio 5:6
+DIMENSIONS           : 640 × 768 px (1280 × 1536 px en Retina)
+EXTENSION            : .jpg (qualité 85)
+PROMPT DE GÉNÉRATION :
+  "Photographie éditoriale en intérieur, lumière douce naturelle depuis une fenêtre, carnet ouvert
+  sur une table en bois ancien avec des notes manuscrites, une tasse de café à côté, stylo posé,
+  feuilles de plantes séchées en arrière-plan flou, ambiance atelier créatif chaleureux, tonalités
+  sable et vert olive, grain argentique, pas de personne visible, format portrait, sans texte."
+NOTES                : L'image est affichée en colonne gauche à côté du texte d'offre. Elle doit
+                       évoquer la réflexion, le soin apporté au travail, sans être trop "lifestyle".
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 09
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : icone-service-01.svg
+RÔLE DANS LA PAGE    : Icône illustrant le service "Stratégie éditoriale"
+SECTION              : Solution / Offre
+FORMAT               : Carré
+DIMENSIONS           : 64 × 64 px (vectoriel SVG)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — icône SVG à créer
+NOTES                : Style : trait fin, monochrome, couleur #2C3D2E ou #B94F2A selon contexte.
+                       Pictogramme suggéré : grille de contenu /  éditorial / feuille avec
+                       lignes. Doit rester lisible à 32px. Pas de remplissage plein, style outline.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 10
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : icone-service-02.svg
+RÔLE DANS LA PAGE    : Icône illustrant le service "Création & publication"
+SECTION              : Solution / Offre
+FORMAT               : Carré
+DIMENSIONS           : 64 × 64 px (vectoriel SVG)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — icône SVG à créer
+NOTES                : Pictogramme suggéré : plume / crayon / bulle de dialogue éditoriale.
+                       Mêmes contraintes de style que icone-service-01.svg.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 11
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : icone-service-03.svg
+RÔLE DANS LA PAGE    : Icône illustrant le service "Animation de communauté"
+SECTION              : Solution / Offre
+FORMAT               : Carré
+DIMENSIONS           : 64 × 64 px (vectoriel SVG)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — icône SVG à créer
+NOTES                : Pictogramme suggéré : groupe de personnes stylisées / cœur / discussion.
+                       Mêmes contraintes de style que icone-service-01.svg.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 12
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : projet-01.jpg
+RÔLE DANS LA PAGE    : Photo de couverture du projet "Moulin des Terres"
+SECTION              : Travaux / preuves
+FORMAT               : Paysage, ratio 4:3
+DIMENSIONS           : 640 × 480 px (1280 × 960 px en Retina)
+EXTENSION            : .jpg (qualité 82)
+PROMPT DE GÉNÉRATION :
+  "Photographie éditoriale, intérieur de moulin artisanal, sacs de farine kraft alignés sur une
+  étagère en bois, lumière chaude latérale depuis une fenêtre, poussière de farine en suspension
+  visible, tonalités sable et brun chaud, grain argentique, profondeur de champ, format paysage
+  4:3, sans texte, sans personne au premier plan."
+NOTES                : Affichée en card, recadrée à 240px de hauteur via object-fit: cover.
+                       La partie centrale de l'image doit être la plus intéressante visuellement.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 13
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : projet-02.jpg
+RÔLE DANS LA PAGE    : Photo de couverture du projet "Atelier Borie"
+SECTION              : Travaux / preuves
+FORMAT               : Paysage, ratio 4:3
+DIMENSIONS           : 640 × 480 px (1280 × 960 px en Retina)
+EXTENSION            : .jpg (qualité 82)
+PROMPT DE GÉNÉRATION :
+  "Photographie lifestyle, gros plan de mains féminines modelant de l'argile sur un tour de potier,
+  éclaboussures d'argile humide, lumière naturelle douce, arrière-plan flou en atelier, tonalités
+  terre et ocre, grain argentique subtil, format paysage 4:3, sans texte."
+NOTES                : Même contraintes de cadrage que projet-01.jpg. Le sujet principal (mains +
+                       argile) doit être centré verticalement pour survivre au recadrage CSS.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 14
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : projet-03.jpg
+RÔLE DANS LA PAGE    : Photo de couverture du projet "La Ferme du Merle"
+SECTION              : Travaux / preuves
+FORMAT               : Paysage, ratio 4:3
+DIMENSIONS           : 640 × 480 px (1280 × 960 px en Retina)
+EXTENSION            : .jpg (qualité 82)
+PROMPT DE GÉNÉRATION :
+  "Photographie éditoriale, plants de légumes variés dans une serre urbaine, lumière tamisée à
+  travers un vitrage translucide, rangées de cultures en bacs surélevés, verdure dense, quelques
+  gouttes d'eau sur les feuilles, tonalités vert et sable, bokeh doux, grain argentique, format
+  paysage 4:3, sans texte, sans personnage."
+NOTES                : Mêmes contraintes de cadrage que les précédentes cartes travaux.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 15
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : portrait.jpg
+RÔLE DANS LA PAGE    : Photo de Clara Morin — section humanisation / à propos
+SECTION              : Portrait
+FORMAT               : Portrait, ratio 3:4
+DIMENSIONS           : 600 × 800 px (1200 × 1600 px en Retina)
+EXTENSION            : .jpg (qualité 85)
+PROMPT DE GÉNÉRATION :
+  "Photographie portrait éditorial, femme d'une trentaine d'années souriante naturellement dans un
+  atelier lumineux, lumière naturelle douce depuis une fenêtre latérale, vêtements sobres et
+  chaleureux (lin, coton), fond légèrement flou avec étagères ou végétaux, regard direct caméra,
+  ambiance détendue et professionnelle, tonalités chaudes sable et vert, grain argentique subtil,
+  format portrait 3:4, sans texte."
+NOTES                : Image recadrée à 560px de hauteur via object-fit: cover; object-position:
+                       center top. Veiller à ce que le visage soit bien dans le tiers supérieur.
+                       C'est l'image qui crée la confiance : elle doit paraître authentique,
+                       pas trop "studio corporate".
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 16
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : avatar-temoignage-01.jpg
+RÔLE DANS LA PAGE    : Photo de Jérôme Aubanel (client fictif) dans la carte témoignage
+SECTION              : Témoignages
+FORMAT               : Carré
+DIMENSIONS           : 96 × 96 px (192 × 192 px en Retina)
+EXTENSION            : .jpg (qualité 80)
+PROMPT DE GÉNÉRATION :
+  "Photographie portrait, homme d'une cinquantaine d'années, visage souriant et bienveillant,
+  extérieur ou atelier en arrière-plan flou, lumière naturelle, ambiance rurale chaleureuse,
+  cadrage carré centré sur le visage, tonalités chaudes, sans texte."
+NOTES                : Affiché à 48px × 48px (border-radius: 50%). Doit rester lisible à très petite
+                       taille — éviter les arrière-plans très chargés.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 17
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : avatar-temoignage-02.jpg
+RÔLE DANS LA PAGE    : Photo de Sophie Borie (cliente fictive) dans la carte témoignage
+SECTION              : Témoignages
+FORMAT               : Carré
+DIMENSIONS           : 96 × 96 px (192 × 192 px en Retina)
+EXTENSION            : .jpg (qualité 80)
+PROMPT DE GÉNÉRATION :
+  "Photographie portrait, femme d'une quarantaine d'années, sourire naturel, atelier de poterie
+  ou céramique en arrière-plan flou, lumière naturelle douce, cadrage carré centré visage,
+  tonalités chaudes terre et crème, sans texte."
+NOTES                : Mêmes contraintes que avatar-temoignage-01.jpg.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 18
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : avatar-temoignage-03.jpg
+RÔLE DANS LA PAGE    : Photo de Lena Gouet (cliente fictive) dans la carte témoignage
+SECTION              : Témoignages
+FORMAT               : Carré
+DIMENSIONS           : 96 × 96 px (192 × 192 px en Retina)
+EXTENSION            : .jpg (qualité 80)
+PROMPT DE GÉNÉRATION :
+  "Photographie portrait, jeune femme d'une trentaine d'années, sourire ouvert, serre ou jardin
+  en arrière-plan flou, lumière naturelle verte et dorée, cadrage carré centré visage, sans texte."
+NOTES                : Mêmes contraintes que avatar-temoignage-01.jpg.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FICHE 19
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOM DU FICHIER       : logo-studio-racine-light.svg
+RÔLE DANS LA PAGE    : Version claire du logo pour le footer (fond sombre)
+SECTION              : Footer
+FORMAT               : Horizontal compact
+DIMENSIONS           : 280 × 72 px (vectoriel SVG)
+EXTENSION            : .svg
+PROMPT DE GÉNÉRATION : Non applicable — décliner depuis logo-studio-racine.svg
+NOTES                : Identique au logo principal mais en couleurs claires (#F2EAD8 ou #C8B98A)
+                       pour fonctionner sur le fond sombre du footer (#1C2118).
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARBORESCENCE COMPLÈTE DU PROJET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+studio-racine/
+├── index.html
+├── style.css
+├── info.txt
+└── assets/
+    └── images/
+        ├── logo-studio-racine.svg          (fiche 01)
+        ├── hero-banner.jpg                  (fiche 02)
+        ├── logo-client-01.svg               (fiche 03)
+        ├── logo-client-02.svg               (fiche 04)
+        ├── logo-client-03.svg               (fiche 05)
+        ├── logo-client-04.svg               (fiche 06)
+        ├── logo-client-05.svg               (fiche 07)
+        ├── solution-ambiance.jpg            (fiche 08)
+        ├── icone-service-01.svg             (fiche 09)
+        ├── icone-service-02.svg             (fiche 10)
+        ├── icone-service-03.svg             (fiche 11)
+        ├── projet-01.jpg                    (fiche 12)
+        ├── projet-02.jpg                    (fiche 13)
+        ├── projet-03.jpg                    (fiche 14)
+        ├── portrait.jpg                     (fiche 15)
+        ├── avatar-temoignage-01.jpg         (fiche 16)
+        ├── avatar-temoignage-02.jpg         (fiche 17)
+        ├── avatar-temoignage-03.jpg         (fiche 18)
+        └── logo-studio-racine-light.svg     (fiche 19)
+
+TOTAL : 19 fichiers image référencés dans index.html
+  → 10 fichiers .jpg (photos)
+  → 9  fichiers .svg (logos, icônes)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OUTILS SUGGÉRÉS POUR PRODUIRE LES IMAGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Photos (.jpg)   : Midjourney, Adobe Firefly, DALL·E 3, Leonardo.ai
+                  → coller les prompts tels quels, ajuster le ratio cible
+SVG logos       : Figma (gratuit), Adobe Illustrator, Inkscape (open source)
+SVG icônes      : Figma, Heroicons (heroicons.com), Phosphor Icons (phosphoricons.com)
+                  → choisir le style "outline" pour rester cohérent
+
+COMMENT OUVRIR LE SITE EN LOCAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Placez index.html, style.css et le dossier assets/ dans le même répertoire.
+2. Ouvrez index.html dans votre navigateur (double-clic).
+3. Les images s'afficheront dès qu'elles sont placées aux bons chemins.
+4. Sans images, le layout reste intact — les balises img occupent leur espace en attendant.
+5. Pour le développement : utilisez VS Code + extension "Live Server" pour le rechargement automatique.
