@@ -1,364 +1,956 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Studio Racine — Clara Morin, community manager pour marques artisanales, engagées et locales. Construire une vraie communauté, pas une audience.">
+
   <title>Studio Racine — Community management pour marques engagées</title>
+
+  <meta
+    name="description"
+    content="Studio Racine accompagne les marques engagées dans leur stratégie social media, leur création de contenu et leur développement digital."
+  >
+
+  <meta name="theme-color" content="#F5F0E7">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
+  <!-- Barre de progression du défilement -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="#hero" class="logo">
-        <img src="assets/images/logo-studio-racine.png" alt="Studio Racine" width="160" height="40" class="logo-img">
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+
+      <a href="#accueil" class="brand" aria-label="Studio Racine, accueil">
+        <img
+          src="assets/images/logo-studio-racine.png"
+          alt="Studio Racine"
+          class="brand-logo"
+        >
       </a>
-      <nav class="main-nav" aria-label="Navigation principale">
-        <ul>
-          <li><a href="#methode">Méthode</a></li>
-          <li><a href="#travaux">Travaux</a></li>
-          <li><a href="#portrait">À propos</a></li>
-          <li><a href="#temoignages">Avis</a></li>
-          <li><a href="#contact" class="nav-cta">Prendre contact</a></li>
-        </ul>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Navigation principale">
+        <a href="#expertises">Expertises</a>
+        <a href="#methode">Méthode</a>
+        <a href="#projets">Réalisations</a>
+        <a href="#studio">Le studio</a>
+
+        <a href="#contact" class="button button-small button-dark nav-cta">
+          Parlons de ton projet
+          <span aria-hidden="true">↗</span>
+        </a>
       </nav>
+
     </div>
   </header>
+
 
   <main>
 
     <!-- HERO -->
-    <section id="hero" class="hero">
-      <div class="hero-image-wrap">
-        <img src="assets/images/hero-banner.png" alt="Atelier artisanal lumineux, mains travaillant la matière, lumière naturelle" width="1440" height="810" class="hero-banner">
-        <div class="hero-overlay" aria-hidden="true"></div>
+    <section class="hero section" id="accueil">
+      <div class="container hero-grid">
+
+        <div class="hero-content" data-reveal>
+
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            STUDIO SOCIAL MEDIA & CRÉATION
+          </div>
+
+          <h1>
+            Fais grandir ta marque,
+            <span class="heading-accent">naturellement.</span>
+          </h1>
+
+          <p class="hero-description">
+            Nous aidons les marques engagées à construire une présence
+            digitale sincère, désirable et durable.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="button button-dark">
+              Parlons de ton projet
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#projets" class="text-link">
+              Découvrir nos projets
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof-avatars" aria-hidden="true">
+              <img src="assets/images/avatar-temoignage-01.png" alt="">
+              <img src="assets/images/avatar-temoignage-02.png" alt="">
+              <img src="assets/images/avatar-temoignage-03.png" alt="">
+            </div>
+
+            <div class="proof-copy">
+              <strong>Des marques, des histoires, du sens.</strong>
+              <span>Une communication pensée pour durer.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-visual" data-reveal>
+
+          <div class="hero-image-wrap">
+            <img
+              src="assets/images/hero-banner.png"
+              alt="Univers visuel naturel et créatif de Studio Racine"
+              class="hero-image"
+              fetchpriority="high"
+            >
+          </div>
+
+          <div class="hero-note hero-note-top">
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <span>
+              <strong>Du sens avant tout</strong>
+              <small>Une stratégie à ton image</small>
+            </span>
+          </div>
+
+          <div class="hero-note hero-note-bottom">
+            <span class="note-number">01</span>
+            <span>
+              <strong>Créer du lien.</strong>
+              <small>Pas seulement du contenu.</small>
+            </span>
+          </div>
+
+          <span class="hero-decoration" aria-hidden="true">R.</span>
+
+        </div>
+
       </div>
-      <div class="hero-content">
-        <p class="eyebrow eyebrow-light">Community management — marques artisanales &amp; engagées</p>
-        <h1 class="hero-title">Votre marque a une histoire.<br>Construisons la communauté<br><em>qui la mérite.</em></h1>
-        <p class="hero-subtitle">Studio Racine accompagne les artisans, créateurs locaux et marques engagées qui veulent bâtir un lien sincère avec leur audience, pas simplement des chiffres.</p>
-        <a href="#contact" class="btn btn-primary">Parlons de votre marque</a>
-        <p class="hero-proof">5 marques accompagnées en simultané · 3 ans d'activité · 100 % de clients sur recommandation</p>
+
+      <a href="#clients" class="hero-scroll" aria-label="Découvrir la suite">
+        <span></span>
+        FAIS DÉFILER
+      </a>
+    </section>
+
+
+    <!-- CLIENTS -->
+    <section class="client-strip" id="clients">
+      <div class="container">
+
+        <p class="client-label">
+          DES UNIVERS QUI NOUS INSPIRENT
+        </p>
+
+        <div class="client-logos">
+          <div class="client-logo">
+            <img
+              src="assets/images/logo-client-01.png"
+              alt="Marque partenaire 1"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo">
+            <img
+              src="assets/images/logo-client-02.png"
+              alt="Marque partenaire 2"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo">
+            <img
+              src="assets/images/logo-client-03.png"
+              alt="Marque partenaire 3"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo">
+            <img
+              src="assets/images/logo-client-04.png"
+              alt="Marque partenaire 4"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="client-logo">
+            <img
+              src="assets/images/logo-client-05.png"
+              alt="Marque partenaire 5"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- LOGOS -->
-    <section id="logos" class="logos-section" aria-label="Marques accompagnées">
-      <div class="content-block">
-        <p class="logos-intro">Elles m'ont fait confiance</p>
-        <div class="logos-grid">
-          <img src="assets/images/logo-client-01.png" alt="Moulin des Terres — minoterie artisanale" width="140" height="48" class="client-logo">
-          <img src="assets/images/logo-client-02.png" alt="Atelier Borie — céramique et poterie" width="140" height="48" class="client-logo">
-          <img src="assets/images/logo-client-03.png" alt="La Ferme du Merle — maraîchage biologique" width="140" height="48" class="client-logo">
-          <img src="assets/images/logo-client-04.png" alt="Brasserie Sauvage — bières artisanales" width="140" height="48" class="client-logo">
-          <img src="assets/images/logo-client-05.png" alt="Tisannerie Clairmont — plantes et infusions" width="140" height="48" class="client-logo">
+
+    <!-- PROBLÉMATIQUE -->
+    <section class="section problem-section" id="problematique">
+      <div class="container">
+
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow">ON SE COMPREND ?</span>
+
+          <h2>
+            Ta marque mérite mieux
+            qu'une présence <span class="heading-accent">en pilote automatique.</span>
+          </h2>
+
+          <p>
+            Publier pour publier ne suffit pas. Une communication efficace
+            doit raconter ton histoire, créer une relation et servir tes objectifs.
+          </p>
         </div>
+
+        <div class="problem-grid">
+
+          <article class="problem-card" data-reveal>
+            <span class="card-index">01 / VISIBILITÉ</span>
+            <div class="problem-icon" aria-hidden="true">↗</div>
+
+            <h3>Tu publies, mais tu stagnes.</h3>
+
+            <p>
+              Tu consacres du temps à tes réseaux, sans voir de véritable
+              évolution dans ton audience ou tes résultats.
+            </p>
+          </article>
+
+          <article class="problem-card" data-reveal>
+            <span class="card-index">02 / COHÉRENCE</span>
+            <div class="problem-icon" aria-hidden="true">✳</div>
+
+            <h3>Ton image manque de cohérence.</h3>
+
+            <p>
+              Tes contenus ne reflètent pas toujours la qualité de ton
+              travail ni la personnalité de ta marque.
+            </p>
+          </article>
+
+          <article class="problem-card" data-reveal>
+            <span class="card-index">03 / TEMPS</span>
+            <div class="problem-icon" aria-hidden="true">◷</div>
+
+            <h3>Tu fais tout, tout seul.</h3>
+
+            <p>
+              Entre la création, les publications et ton activité,
+              communiquer devient une charge de plus.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="problem-conclusion" data-reveal>
+          <span class="conclusion-symbol" aria-hidden="true">↳</span>
+          <p>
+            Et si ta communication devenait enfin
+            <strong>un véritable atout pour ta marque ?</strong>
+          </p>
+        </div>
+
       </div>
     </section>
 
-    <!-- PROBLÈME -->
-    <section id="probleme" class="probleme">
-      <div class="content-block">
-        <p class="eyebrow eyebrow-dark">Vous vous reconnaissez ?</p>
-        <h2 class="section-title">Vous avez un vrai savoir-faire.<br>Mais en ligne, ça ne se voit pas.</h2>
-        <div class="probleme-grid">
-          <div class="probleme-card">
-            <p>Vous publiez de temps en temps, sans fil directeur. Chaque post vous coûte une heure de doute.</p>
+
+    <!-- EXPERTISES -->
+    <section class="section expertise-section" id="expertises">
+      <div class="container">
+
+        <div class="expertise-intro">
+
+          <div class="expertise-copy" data-reveal>
+            <span class="eyebrow">NOTRE TERRAIN DE JEU</span>
+
+            <h2>
+              Une stratégie solide.
+              <span class="heading-accent">Des contenus vivants.</span>
+            </h2>
+
+            <p>
+              De la réflexion à la publication, nous construisons une
+              communication cohérente, adaptée à tes objectifs et fidèle
+              à ce qui rend ta marque unique.
+            </p>
+
+            <a href="#contact" class="button button-outline">
+              Découvrir notre approche
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
-          <div class="probleme-card">
-            <p>Votre communauté est petite, peu active, et vous ne savez pas vraiment comment l'animer sans vous épuiser.</p>
+
+          <div class="expertise-image" data-reveal>
+            <img
+              src="assets/images/solution-ambiance.png"
+              alt="Ambiance créative et univers visuel de Studio Racine"
+              loading="lazy"
+            >
+
+            <div class="image-caption">
+              <span>LE BON ÉQUILIBRE</span>
+              <strong>Stratégie, créativité et authenticité.</strong>
+            </div>
           </div>
-          <div class="probleme-card">
-            <p>Vous savez que votre histoire mérite mieux, mais vous n'avez ni le temps ni les mots pour la raconter correctement.</p>
-          </div>
+
         </div>
+
+        <div class="services-grid">
+
+          <article class="service-card" data-reveal>
+            <div class="service-top">
+              <span class="service-number">01</span>
+
+              <img
+                src="assets/images/icone-service-01.png"
+                alt=""
+                loading="lazy"
+              >
+            </div>
+
+            <h3>Stratégie social media</h3>
+
+            <p>
+              Définir une direction claire, identifier ton audience
+              et construire un plan d'action cohérent.
+            </p>
+
+            <a href="#contact" class="service-link" aria-label="Parler de stratégie social media">
+              En savoir plus <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-top">
+              <span class="service-number">02</span>
+
+              <img
+                src="assets/images/icone-service-02.png"
+                alt=""
+                loading="lazy"
+              >
+            </div>
+
+            <h3>Création de contenu</h3>
+
+            <p>
+              Imaginer des visuels, des textes et des formats qui
+              traduisent ton identité et captent l'attention.
+            </p>
+
+            <a href="#contact" class="service-link" aria-label="Parler de création de contenu">
+              En savoir plus <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-top">
+              <span class="service-number">03</span>
+
+              <img
+                src="assets/images/icone-service-03.png"
+                alt=""
+                loading="lazy"
+              >
+            </div>
+
+            <h3>Gestion des réseaux</h3>
+
+            <p>
+              Organiser les publications, animer ta communauté et
+              maintenir une présence régulière et cohérente.
+            </p>
+
+            <a href="#contact" class="service-link" aria-label="Parler de gestion des réseaux sociaux">
+              En savoir plus <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- SOLUTION -->
-    <section id="solution" class="solution">
-      <div class="content-block solution-grid">
-        <div class="solution-image-wrap">
-          <img src="assets/images/solution-ambiance.png" alt="Carnet ouvert sur une table en bois, café et notes manuscrites, ambiance atelier" width="640" height="760" class="solution-img">
-        </div>
-        <div class="solution-text">
-          <p class="eyebrow eyebrow-dark">Ce que je fais</p>
-          <h2 class="section-title">Je prends en charge votre présence en ligne. Entièrement.</h2>
-          <p>Vous repartez dans votre atelier. Je m'occupe du reste : stratégie éditoriale, création de contenu, animation de communauté et reporting mensuel clair.</p>
-          <ul class="solution-list">
-            <li>
-              <img src="assets/images/icone-service-01.png" alt="" width="32" height="32" class="service-icon" aria-hidden="true">
-              <span><strong>Stratégie éditoriale</strong> — un plan de contenu pensé pour votre audience et votre savoir-faire.</span>
-            </li>
-            <li>
-              <img src="assets/images/icone-service-02.png" alt="" width="32" height="32" class="service-icon" aria-hidden="true">
-              <span><strong>Création &amp; publication</strong> — textes, légendes, stories et posts, dans votre voix.</span>
-            </li>
-            <li>
-              <img src="assets/images/icone-service-03.png" alt="" width="32" height="32" class="service-icon" aria-hidden="true">
-              <span><strong>Animation de communauté</strong> — réponses aux commentaires, DM, veille et engagement quotidien.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
     <!-- MÉTHODE -->
-    <section id="methode" class="methode">
-      <div class="content-block">
-        <p class="eyebrow eyebrow-dark">Ma méthode</p>
-        <h2 class="section-title">Quatre étapes pour une communauté<br>qui tient dans la durée</h2>
-        <ol class="methode-steps">
-          <li class="step">
-            <span class="step-num">01</span>
-            <div class="step-body">
-              <h3>Immersion</h3>
-              <p>Je passe du temps avec vous, dans votre espace. Je pose des questions, j'observe, je note. Avant d'écrire un mot, je comprends.</p>
+    <section class="section method-section" id="methode">
+      <div class="container">
+
+        <div class="method-heading" data-reveal>
+          <span class="eyebrow">COMMENT ON TRAVAILLE</span>
+
+          <h2>
+            Pas de recette magique.
+            <span class="heading-accent">Une méthode qui a du sens.</span>
+          </h2>
+
+          <p>
+            Chaque collaboration commence par l'écoute et se construit
+            autour de tes besoins réels.
+          </p>
+        </div>
+
+        <div class="method-layout">
+
+          <div class="method-visual" data-reveal>
+            <img
+              src="assets/images/solution-ambiance.png"
+              alt="Inspiration et préparation d'une stratégie de communication"
+              loading="lazy"
+            >
+
+            <div class="method-stamp" aria-hidden="true">
+              <span>FAIT AVEC</span>
+              <strong>DU SENS</strong>
+              <span>ET DU CŒUR</span>
             </div>
-          </li>
-          <li class="step">
-            <span class="step-num">02</span>
-            <div class="step-body">
-              <h3>Stratégie</h3>
-              <p>Je construis un plan éditorial sur trois mois : thèmes, formats, rythme, tonalité. Vous le validez, on ajuste, on lance.</p>
-            </div>
-          </li>
-          <li class="step">
-            <span class="step-num">03</span>
-            <div class="step-body">
-              <h3>Production &amp; publication</h3>
-              <p>Je crée et publie chaque contenu. Vous n'avez rien à relire sauf si vous le souhaitez. La ligne éditoriale est claire dès le départ.</p>
-            </div>
-          </li>
-          <li class="step">
-            <span class="step-num">04</span>
-            <div class="step-body">
-              <h3>Suivi &amp; ajustement</h3>
-              <p>Un point mensuel pour regarder ce qui fonctionne, ce qu'on affine. Pas un rapport de 40 pages — une vraie conversation.</p>
-            </div>
-          </li>
-        </ol>
+          </div>
+
+          <div class="method-steps">
+
+            <article class="method-step" data-reveal>
+              <span class="step-number">01</span>
+
+              <div>
+                <h3>On prend le temps de comprendre.</h3>
+                <p>
+                  Ton activité, tes valeurs, tes objectifs et les personnes
+                  que tu souhaites toucher.
+                </p>
+              </div>
+            </article>
+
+            <article class="method-step" data-reveal>
+              <span class="step-number">02</span>
+
+              <div>
+                <h3>On construit ta stratégie.</h3>
+                <p>
+                  Nous définissons ensemble les messages, les formats
+                  et les priorités de ta communication.
+                </p>
+              </div>
+            </article>
+
+            <article class="method-step" data-reveal>
+              <span class="step-number">03</span>
+
+              <div>
+                <h3>On donne vie aux idées.</h3>
+                <p>
+                  Nous créons et organisons des contenus qui respectent
+                  ton identité et parlent à ton audience.
+                </p>
+              </div>
+            </article>
+
+            <article class="method-step" data-reveal>
+              <span class="step-number">04</span>
+
+              <div>
+                <h3>On observe et on ajuste.</h3>
+                <p>
+                  Nous analysons les résultats et faisons évoluer
+                  la stratégie en fonction des enseignements.
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- TRAVAUX -->
-    <section id="travaux" class="travaux">
-      <div class="content-block">
-        <p class="eyebrow eyebrow-dark">Travaux</p>
-        <h2 class="section-title">Trois projets qui parlent mieux que moi</h2>
-        <div class="travaux-grid">
-          <article class="travail-card">
-            <div class="travail-img-wrap">
-              <img src="assets/images/projet-01.png" alt="Sacs de farine kraft alignés dans un moulin artisanal, lumière chaude" width="640" height="480" class="travail-img">
-            </div>
-            <div class="travail-body">
-              <span class="travail-tag">Alimentation &amp; terroir</span>
-              <h3>Moulin des Terres</h3>
-              <p>Minoterie familiale de la Drôme, quasi invisible en ligne. En huit mois, leur compte Instagram est devenu le carnet de bord d'un moulin vivant : farine, saisons, paysans fournisseurs. Résultat : +280 % d'abonnés engagés et trois nouveaux boulangers artisans clients.</p>
-            </div>
-          </article>
-          <article class="travail-card">
-            <div class="travail-img-wrap">
-              <img src="assets/images/projet-02.png" alt="Mains de potière modelant une pièce sur un tour, éclaboussures d'argile" width="640" height="480" class="travail-img">
-            </div>
-            <div class="travail-body">
-              <span class="travail-tag">Artisanat &amp; création</span>
-              <h3>Atelier Borie</h3>
-              <p>Sophie ne voulait pas "faire les réseaux". On a construit un format où ses mains racontent plus que son visage : tournage, émaillage, défournement. Sa newsletter mensuelle compte aujourd'hui 1 400 abonnés et elle vend ses collections en moins de 48h après chaque annonce.</p>
-            </div>
-          </article>
-          <article class="travail-card">
-            <div class="travail-img-wrap">
-              <img src="assets/images/projet-03.png" alt="Plants de légumes en serre urbaine, lumière tamisée à travers le vitrage" width="640" height="480" class="travail-img">
-            </div>
-            <div class="travail-body">
-              <span class="travail-tag">Agriculture urbaine</span>
-              <h3>La Ferme du Merle</h3>
-              <p>Une petite ferme urbaine portée par deux associés, sans budget communication. On a documenté chaque semaine de culture — les ratés autant que les réussites. Leur communauté locale est devenue leur meilleure force de vente : liste d'attente ouverte, marché du vendredi complet.</p>
-            </div>
-          </article>
+
+    <!-- RÉALISATIONS -->
+    <section class="section projects-section" id="projets">
+      <div class="container">
+
+        <div class="section-heading projects-heading" data-reveal>
+          <span class="eyebrow">DES IDÉES QUI PRENNENT VIE</span>
+
+          <h2>
+            Des histoires de marques,
+            <span class="heading-accent">racontées autrement.</span>
+          </h2>
+
+          <p>
+            Quelques univers créatifs imaginés pour donner de la cohérence
+            aux marques et de la personnalité à leur présence digitale.
+          </p>
         </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card project-large" data-reveal>
+            <a href="#contact" class="project-image-link" aria-label="Découvrir un projet de stratégie de contenu">
+              <div class="project-image">
+                <img
+                  src="assets/images/projet-01.png"
+                  alt="Projet créatif numéro un"
+                  loading="lazy"
+                >
+
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+
+            <div class="project-meta">
+              <div>
+                <span class="project-category">IDENTITÉ & CONTENU</span>
+                <h3>Une marque qui respire.</h3>
+              </div>
+
+              <span class="project-year">PROJET 01</span>
+            </div>
+          </article>
+
+          <article class="project-card project-offset" data-reveal>
+            <a href="#contact" class="project-image-link" aria-label="Découvrir un projet de communication digitale">
+              <div class="project-image">
+                <img
+                  src="assets/images/projet-02.png"
+                  alt="Projet créatif numéro deux"
+                  loading="lazy"
+                >
+
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+
+            <div class="project-meta">
+              <div>
+                <span class="project-category">DIRECTION ARTISTIQUE</span>
+                <h3>Une vision plus claire.</h3>
+              </div>
+
+              <span class="project-year">PROJET 02</span>
+            </div>
+          </article>
+
+          <article class="project-card project-wide" data-reveal>
+            <a href="#contact" class="project-image-link" aria-label="Découvrir un projet de stratégie social media">
+              <div class="project-image">
+                <img
+                  src="assets/images/projet-03.png"
+                  alt="Projet créatif numéro trois"
+                  loading="lazy"
+                >
+
+                <span class="project-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+
+            <div class="project-meta">
+              <div>
+                <span class="project-category">STRATÉGIE SOCIAL MEDIA</span>
+                <h3>Créer du lien, durablement.</h3>
+              </div>
+
+              <span class="project-year">PROJET 03</span>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="projects-note">
+          Les projets présentés servent d'exemples de direction créative.
+          Les références et résultats réels sont à confirmer avant publication.
+        </p>
+
       </div>
     </section>
+
 
     <!-- CHIFFRES -->
-    <section id="chiffres" class="chiffres">
-      <div class="content-block">
-        <p class="eyebrow eyebrow-light">En chiffres</p>
-        <div class="stats-grid">
-          <div class="stat">
-            <p class="stat-number">+240%</p>
-            <p class="stat-label">d'engagement moyen sur les comptes accompagnés au bout de six mois</p>
-          </div>
-          <div class="stat">
-            <p class="stat-number">18</p>
-            <p class="stat-label">marques artisanales ou engagées accompagnées depuis 2021</p>
-          </div>
-          <div class="stat">
-            <p class="stat-number">100%</p>
-            <p class="stat-label">de mes clients arrivent par recommandation directe — aucune publicité payante</p>
-          </div>
-          <div class="stat">
-            <p class="stat-number">5</p>
-            <p class="stat-label">marques maximum suivies en simultané, pour ne jamais rogner sur l'attention</p>
-          </div>
+    <section class="section numbers-section">
+      <div class="container numbers-layout">
+
+        <div class="numbers-intro" data-reveal>
+          <span class="eyebrow">CE QUI NOUS GUIDE</span>
+
+          <h2>
+            Faire moins,
+            <span class="heading-accent">mais mieux.</span>
+          </h2>
+
+          <p>
+            Nous privilégions les idées pertinentes, les relations sincères
+            et les stratégies construites pour durer.
+          </p>
         </div>
+
+        <div class="numbers-message" data-reveal>
+          <span class="numbers-asterisk" aria-hidden="true">✳</span>
+
+          <p>
+            Une marque forte ne cherche pas à parler à tout le monde.
+            Elle sait pourquoi elle parle, à qui elle s'adresse
+            et ce qu'elle veut transmettre.
+          </p>
+
+          <span class="numbers-signature">L'esprit Studio Racine</span>
+        </div>
+
       </div>
     </section>
 
-    <!-- PORTRAIT -->
-    <section id="portrait" class="portrait">
-      <div class="content-block portrait-grid">
-        <div class="portrait-image-wrap">
-          <img src="assets/images/portrait.png" alt="Clara Morin, fondatrice de Studio Racine, souriant dans un atelier lumineux" width="600" height="740" class="portrait-img">
+
+    <!-- LE STUDIO -->
+    <section class="section about-section" id="studio">
+      <div class="container about-grid">
+
+        <div class="about-visual" data-reveal>
+          <div class="about-image-wrap">
+            <img
+              src="assets/images/portrait.png"
+              alt="Portrait de la fondatrice de Studio Racine"
+              loading="lazy"
+            >
+          </div>
+
+          <span class="about-decoration" aria-hidden="true">Racine.</span>
         </div>
-        <div class="portrait-text">
-          <p class="eyebrow eyebrow-dark">À propos</p>
-          <h2 class="section-title">Clara Morin,<br>fondatrice de Studio Racine</h2>
-          <p>J'ai grandi entre les serres maraîchères de ma famille bretonne et les étals du marché du dimanche. Très tôt, j'ai compris que les gens n'achètent pas des produits : ils achètent une confiance, une histoire, une cohérence.</p>
-          <p>Après sept ans en agence de communication à Paris, j'ai fondé Studio Racine en 2021 pour travailler différemment : moins de clients, plus de profondeur. Je ne gère pas des comptes, j'accompagne des marques que je respecte vraiment.</p>
-          <ul class="portrait-values">
-            <li>Immersion terrain systématique avant chaque projet</li>
-            <li>Cinq marques maximum en simultané, toujours</li>
-            <li>Accompagnements à partir de six mois — pas de missions express</li>
-            <li>Basée à Nantes, présente partout en France</li>
-          </ul>
+
+        <div class="about-content" data-reveal>
+          <span class="eyebrow">DERRIÈRE LE STUDIO</span>
+
+          <h2>
+            Derrière chaque marque,
+            <span class="heading-accent">il y a une histoire.</span>
+          </h2>
+
+          <p>
+            Studio Racine est né d'une conviction simple : une communication
+            réussie ne se résume pas à de beaux visuels ou à des publications
+            régulières.
+          </p>
+
+          <p>
+            Elle commence par ce qui rend une marque unique. Ses valeurs,
+            ses ambitions, ses différences. Notre rôle est de les comprendre
+            et de les traduire en une présence digitale cohérente et vivante.
+          </p>
+
+          <p>
+            Nous croyons aux collaborations humaines, aux idées réfléchies
+            et aux marques qui choisissent d'avancer avec intention.
+          </p>
+
+          <a href="#contact" class="button button-dark">
+            Faisons connaissance
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
+
       </div>
     </section>
+
 
     <!-- TÉMOIGNAGES -->
-    <section id="temoignages" class="temoignages">
-      <div class="content-block">
-        <p class="eyebrow eyebrow-dark">Témoignages</p>
-        <h2 class="section-title">Ce qu'ils en disent</h2>
-        <div class="temoignages-grid">
-          <blockquote class="temoignage-card">
-            <p>Clara a passé deux matinées dans notre moulin avant d'écrire quoi que ce soit. C'est ce qui fait la différence : elle parle de notre travail comme si c'était le sien. Nos clients nous disent qu'ils ont l'impression de nous connaître avant même d'avoir commandé.</p>
-            <cite>
-              <img src="assets/images/avatar-temoignage-01.png" alt="Photo de Jérôme Aubanel" width="48" height="48" class="avatar-img">
-              <span><strong>Jérôme Aubanel</strong><br>Moulin des Terres, Drôme</span>
-            </cite>
-          </blockquote>
-          <blockquote class="temoignage-card">
-            <p>Je détestais l'idée de me montrer sur les réseaux. Studio Racine a trouvé comment raconter mon atelier sans jamais me mettre mal à l'aise. Mes collections partent en 24h maintenant. Je n'aurais jamais cru ça possible il y a un an.</p>
-            <cite>
-              <img src="assets/images/avatar-temoignage-02.png" alt="Photo de Sophie Borie" width="48" height="48" class="avatar-img">
-              <span><strong>Sophie Borie</strong><br>Atelier Borie, Nantes</span>
-            </cite>
-          </blockquote>
-          <blockquote class="temoignage-card">
-            <p>On n'avait aucun budget comm et pas le temps d'y penser. Clara a construit quelque chose de simple et de vrai. Notre marché du vendredi est complet depuis six mois et on a maintenant une vraie liste d'attente pour les paniers de saison.</p>
-            <cite>
-              <img src="assets/images/avatar-temoignage-03.png" alt="Photo de Lena Gouet" width="48" height="48" class="avatar-img">
-              <span><strong>Lena Gouet</strong><br>La Ferme du Merle, Montreuil</span>
-            </cite>
-          </blockquote>
+    <section class="section testimonials-section" id="temoignages">
+      <div class="container">
+
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow">LES RELATIONS AVANT TOUT</span>
+
+          <h2>
+            Une collaboration qui
+            <span class="heading-accent">fait la différence.</span>
+          </h2>
         </div>
+
+        <div class="testimonials-grid">
+
+          <article class="testimonial-card" data-reveal>
+            <span class="quote-mark" aria-hidden="true">“</span>
+
+            <blockquote>
+              Nous avons enfin une direction claire pour notre communication.
+              Chaque contenu a sa place et raconte quelque chose de notre marque.
+            </blockquote>
+
+            <div class="testimonial-author">
+              <img
+                src="assets/images/avatar-temoignage-01.png"
+                alt=""
+                loading="lazy"
+              >
+
+              <div>
+                <strong>Cliente — Projet exemple</strong>
+                <span>Stratégie de contenu</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card testimonial-featured" data-reveal>
+            <span class="quote-mark" aria-hidden="true">“</span>
+
+            <blockquote>
+              Une approche attentive, créative et surtout cohérente avec
+              nos valeurs. Nous avons gagné en clarté dans notre façon de communiquer.
+            </blockquote>
+
+            <div class="testimonial-author">
+              <img
+                src="assets/images/avatar-temoignage-02.png"
+                alt=""
+                loading="lazy"
+              >
+
+              <div>
+                <strong>Cliente — Projet exemple</strong>
+                <span>Direction artistique</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-reveal>
+            <span class="quote-mark" aria-hidden="true">“</span>
+
+            <blockquote>
+              Le studio a su comprendre notre univers et le traduire en
+              contenus qui nous ressemblent vraiment.
+            </blockquote>
+
+            <div class="testimonial-author">
+              <img
+                src="assets/images/avatar-temoignage-03.png"
+                alt=""
+                loading="lazy"
+              >
+
+              <div>
+                <strong>Client — Projet exemple</strong>
+                <span>Gestion des réseaux sociaux</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="projects-note">
+          Témoignages de démonstration à remplacer par des retours clients
+          authentiques avant toute mise en ligne commerciale.
+        </p>
+
       </div>
     </section>
+
 
     <!-- FAQ -->
-    <section id="faq" class="faq">
-      <div class="content-block">
-        <p class="eyebrow eyebrow-dark">Questions fréquentes</p>
-        <h2 class="section-title">Ce que vous vous demandez sûrement</h2>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>Vous travaillez sur quelles plateformes ?</summary>
-            <p>Instagram et Facebook principalement, avec une attention particulière aux newsletters selon les marques. Je ne fais pas du tout de TikTok ni de LinkedIn — mon cœur de métier, c'est la narration éditoriale, pas la viralité.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Combien de temps avant de voir des résultats ?</summary>
-            <p>Les premiers signes tangibles — hausse de l'engagement, messages entrants, retours clients — apparaissent en général entre le deuxième et le troisième mois. Une vraie communauté se construit sur six mois minimum, c'est pourquoi mes accompagnements démarrent à cette durée.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Est-ce que je garde la main sur les contenus ?</summary>
-            <p>Oui, toujours. Vous pouvez relire et valider chaque contenu avant publication, ou me faire confiance pour publier directement selon la charte qu'on aura construite ensemble. C'est vous qui choisissez le niveau d'implication que vous souhaitez garder.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Vous travaillez avec tout type de marque ?</summary>
-            <p>Non, et c'est une fierté. Je travaille exclusivement avec des marques artisanales, engagées ou locales. Pas de grandes entreprises, pas de marques sans histoire. Si votre produit ou service n'a pas de raison d'être sincère, je ne suis probablement pas la bonne personne.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Quels sont vos tarifs ?</summary>
-            <p>Mes accompagnements démarrent à 900 € HT / mois pour un suivi d'une plateforme. Un devis précis est établi après notre premier échange, selon le périmètre et la durée. Je préfère en discuter de vive voix plutôt qu'afficher une grille qui ne colle jamais vraiment.</p>
-          </details>
+    <section class="section faq-section" id="faq">
+      <div class="container faq-layout">
+
+        <div class="faq-intro" data-reveal>
+          <span class="eyebrow">BON À SAVOIR</span>
+
+          <h2>
+            Quelques questions,
+            <span class="heading-accent">avant de se lancer.</span>
+          </h2>
+
+          <p>
+            Tu as encore quelques interrogations ? Voici les réponses
+            aux questions les plus fréquentes.
+          </p>
+
+          <a href="#contact" class="text-link">
+            Une autre question ?
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
+
+        <div class="faq-list" data-reveal>
+
+          <details class="faq-item">
+            <summary>
+              À qui s'adressent vos services ?
+              <span class="faq-symbol" aria-hidden="true"></span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Nous accompagnons les marques, les entrepreneurs et les
+                structures qui souhaitent développer une présence digitale
+                cohérente et fidèle à leurs valeurs.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Proposez-vous des prestations ponctuelles ?
+              <span class="faq-symbol" aria-hidden="true"></span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Selon les besoins, nous pouvons travailler sur une mission
+                ciblée ou envisager une collaboration sur la durée.
+                Les modalités sont définies ensemble.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Comment se déroule une première collaboration ?
+              <span class="faq-symbol" aria-hidden="true"></span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Nous commençons par un échange pour comprendre ton activité,
+                tes attentes et tes objectifs. Nous proposons ensuite une
+                approche adaptée au projet.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Combien de temps faut-il pour commencer ?
+              <span class="faq-symbol" aria-hidden="true"></span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Le calendrier dépend de la mission, de son périmètre
+                et des éléments nécessaires. Un planning est défini
+                avant le début du travail.
+              </p>
+            </div>
+          </details>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- CTA -->
-    <section id="cta-final" class="cta-final">
-      <div class="content-block cta-inner">
-        <h2 class="cta-title">Votre histoire mérite<br>d'être racontée correctement.</h2>
-        <p>Un premier échange de 30 minutes, sans engagement, pour voir si ça peut coller entre votre marque et ma façon de travailler.</p>
-        <a href="#contact" class="btn btn-light">Réserver un échange gratuit</a>
-      </div>
-    </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact">
-      <div class="content-block contact-grid">
-        <div class="contact-intro">
-          <p class="eyebrow eyebrow-dark">Contact</p>
-          <h2 class="section-title">Parlons de votre marque</h2>
-          <p>Je réponds à chaque message sous 48h ouvrées. Si votre demande correspond à ce que je fais, je vous propose rapidement un premier appel.</p>
-          <p class="contact-note">Studio Racine travaille avec 5 marques maximum. Si je suis au complet, je vous le dis honnêtement et vous oriente si je peux.</p>
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="contact-panel" data-reveal>
+
+          <div class="contact-copy">
+            <span class="eyebrow eyebrow-light">ET SI ON EN PARLAIT ?</span>
+
+            <h2>
+              Ta prochaine étape
+              <span class="contact-heading-accent">commence ici.</span>
+            </h2>
+
+            <p>
+              Raconte-nous ton projet, tes idées ou les défis que tu rencontres.
+              Commençons par une conversation, sans pression.
+            </p>
+
+            <a
+              href="mailto:bonjour@studioracine.fr?subject=Parlons%20de%20mon%20projet"
+              class="button button-light"
+            >
+              Écrire au studio
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="contact-decoration" aria-hidden="true">
+            <span class="contact-circle contact-circle-one"></span>
+            <span class="contact-circle contact-circle-two"></span>
+            <span class="contact-star">✳</span>
+            <span class="contact-word">Ensemble.</span>
+          </div>
+
         </div>
-        <form class="contact-form" aria-label="Formulaire de contact Studio Racine">
-          <div class="form-row">
-            <label for="prenom">Votre prénom</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Sophie" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Votre email</label>
-            <input type="email" id="email" name="email" placeholder="sophie@atelierexemple.fr" required>
-          </div>
-          <div class="form-row">
-            <label for="type-marque">Type de marque</label>
-            <select id="type-marque" name="type-marque">
-              <option value="artisanat">Artisanat &amp; savoir-faire</option>
-              <option value="alimentation">Alimentation &amp; terroir</option>
-              <option value="agriculture">Agriculture &amp; maraîchage</option>
-              <option value="createur">Créateur·rice local·e</option>
-              <option value="autre">Autre</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="message">Racontez-moi votre marque</label>
-            <textarea id="message" name="message" rows="5" placeholder="Qui vous êtes, ce que vous faites, et pourquoi vous cherchez quelqu'un comme moi maintenant."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Envoyer mon message</button>
-          <p class="form-reassurance">Réponse garantie sous 48h ouvrées.</p>
-        </form>
+
       </div>
     </section>
 
   </main>
 
+
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="assets/images/logo-studio-racine-light.png" alt="Studio Racine" width="140" height="36" class="footer-logo">
-        <p class="footer-tagline">Community management pour les marques qui ont quelque chose à dire.</p>
+    <div class="container">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+          <a href="#accueil" class="brand footer-logo">
+            <img
+              src="assets/images/logo-studio-racine-light.png"
+              alt="Studio Racine"
+              loading="lazy"
+            >
+          </a>
+
+          <p>
+            Des marques qui ont du sens.<br>
+            Une communication qui leur ressemble.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explorer</h3>
+          <a href="#expertises">Expertises</a>
+          <a href="#methode">Notre méthode</a>
+          <a href="#projets">Réalisations</a>
+          <a href="#studio">Le studio</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Discutons</h3>
+          <a href="#contact">Parlons de ton projet</a>
+          <a href="mailto:bonjour@studioracine.fr">Nous écrire</a>
+        </div>
+
       </div>
-      <nav class="footer-nav" aria-label="Navigation secondaire">
-        <ul>
-          <li><a href="#methode">Méthode</a></li>
-          <li><a href="#travaux">Travaux</a></li>
-          <li><a href="#portrait">À propos</a></li>
-          <li><a href="#temoignages">Avis</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <p class="footer-legal">© 2026 Studio Racine — Clara Morin · Nantes, France · Mentions légales fictives</p>
+
+      <div class="footer-bottom">
+        <p>© <span id="current-year">2026</span> Studio Racine. Tous droits réservés.</p>
+
+        <a href="#top" class="back-to-top">
+          Retour en haut <span aria-hidden="true">↑</span>
+        </a>
+      </div>
+
     </div>
   </footer>
 
