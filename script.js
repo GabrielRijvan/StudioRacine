@@ -1,80 +1,46 @@
 
 /* =========================================================
    STUDIO RACINE — INTERACTIONS
-   JavaScript natif, sans bibliothèque externe
    ========================================================= */
 
 document.documentElement.classList.add("js-enabled");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
-  const body = document.body;
   const header = document.querySelector(".site-header");
-  const loader = document.querySelector(".site-loader");
   const menuToggle = document.querySelector(".menu-toggle");
   const mainNav = document.querySelector(".main-nav");
-  const progressBar = document.querySelector(".scroll-progress");
+  const navLinks = document.querySelectorAll(".main-nav a");
+  const scrollProgress = document.querySelector(".scroll-progress");
   const yearElement = document.querySelector("#current-year");
-  const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
 
-  /* ---------------------------------------------------------
-     1. ANNÉE AUTOMATIQUE
-     --------------------------------------------------------- */
+  /* 01. ANNÉE AUTOMATIQUE
+     ========================================================= */
 
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
 
-  /* ---------------------------------------------------------
-     2. ÉCRAN DE CHARGEMENT
-     --------------------------------------------------------- */
 
-  const hideLoader = () => {
-    if (!loader) return;
-
-    loader.classList.add("is-hidden");
-
-    // Retire le loader du rendu après sa transition.
-    window.setTimeout(() => {
-      loader.hidden = true;
-    }, 800);
-  };
-
-  if (reducedMotion) {
-    hideLoader();
-  } else {
-    // Durée maîtrisée pour conserver une introduction fluide.
-    window.setTimeout(hideLoader, 1100);
-  }
-
-  // Sécurité : ne pas conserver le loader si le chargement est long.
-  window.addEventListener("load", hideLoader, { once: true });
-
-  /* ---------------------------------------------------------
-     3. MENU MOBILE
-     --------------------------------------------------------- */
-
-  const openMenu = () => {
-    if (!menuToggle || !mainNav) return;
-
-    mainNav.classList.add("is-open");
-    menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", "Fermer le menu");
-    body.classList.add("menu-open");
-  };
-
-  const closeMenu = () => {
-    if (!menuToggle || !mainNav) return;
-
-    mainNav.classList.remove("is-open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Ouvrir le menu");
-    body.classList.remove("menu-open");
-  };
+  /* 02. MENU MOBILE
+     ========================================================= */
 
   if (menuToggle && mainNav) {
+    const closeMenu = () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+
+      mainNav.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+    };
+
+    const openMenu = () => {
+      menuToggle.setAttribute("aria-expanded", "true");
+      menuToggle.setAttribute("aria-label", "Fermer le menu");
+
+      mainNav.classList.add("is-open");
+      document.body.classList.add("menu-open");
+    };
+
     menuToggle.addEventListener("click", () => {
       const isOpen =
         menuToggle.getAttribute("aria-expanded") === "true";
@@ -86,94 +52,96 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Fermer après la sélection d'une destination.
-    mainNav.querySelectorAll("a").forEach((link) => {
+    // Fermer le menu après un clic sur un lien.
+    navLinks.forEach((link) => {
       link.addEventListener("click", closeMenu);
     });
 
-    // Fermer avec Échap.
+    // Fermer avec la touche Échap.
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         closeMenu();
       }
     });
 
-    // Évite de conserver le menu mobile lors d'un passage
-    // vers la mise en page de bureau.
+    // Fermer si la fenêtre repasse en mode ordinateur.
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 760) {
+      if (window.innerWidth > 820) {
         closeMenu();
       }
     });
   }
 
-  /* ---------------------------------------------------------
-     4. HEADER AU DÉFILEMENT
-     --------------------------------------------------------- */
+
+  /* 03. HEADER AU DÉFILEMENT
+     ========================================================= */
 
   const updateHeader = () => {
     if (!header) return;
 
     header.classList.toggle(
       "is-scrolled",
-      window.scrollY > 25
+      window.scrollY > 30
     );
   };
 
-  /* ---------------------------------------------------------
-     5. BARRE DE PROGRESSION
-     --------------------------------------------------------- */
+  updateHeader();
 
-  let scrollScheduled = false;
+  window.addEventListener("scroll", updateHeader, {
+    passive: true
+  });
 
-  const updateScrollProgress = () => {
+
+  /* 04. BARRE DE PROGRESSION
+     ========================================================= */
+
+  let progressTicking = false;
+
+  const updateProgress = () => {
+    if (!scrollProgress) return;
+
     const scrollableHeight =
-      root.scrollHeight - window.innerHeight;
+      document.documentElement.scrollHeight - window.innerHeight;
 
     const progress =
       scrollableHeight > 0
-        ? Math.min(
-            100,
-            Math.max(0, (window.scrollY / scrollableHeight) * 100)
-          )
+        ? (window.scrollY / scrollableHeight) * 100
         : 0;
 
-    if (progressBar) {
-      progressBar.style.setProperty(
-        "--scroll-width",
-        `${progress}%`
-      );
-    }
+    scrollProgress.style.width = `${Math.min(progress, 100)}%`;
 
-    updateHeader();
-    scrollScheduled = false;
+    progressTicking = false;
   };
 
   window.addEventListener(
     "scroll",
     () => {
-      if (scrollScheduled) return;
+      if (progressTicking) return;
 
-      scrollScheduled = true;
-
-      window.requestAnimationFrame(updateScrollProgress);
+      progressTicking = true;
+      window.requestAnimationFrame(updateProgress);
     },
     { passive: true }
   );
 
-  updateScrollProgress();
+  window.addEventListener("resize", updateProgress);
 
-  /* ---------------------------------------------------------
-     6. RÉVÉLATION DES ÉLÉMENTS
-     --------------------------------------------------------- */
+  updateProgress();
 
-  const revealElements = document.querySelectorAll(".reveal");
 
-  if (reducedMotion || !("IntersectionObserver" in window)) {
-    revealElements.forEach((element) => {
-      element.classList.add("is-visible");
-    });
-  } else {
+  /* 05. APPARITION DES ÉLÉMENTS AU SCROLL
+     ========================================================= */
+
+  const revealElements = document.querySelectorAll("[data-reveal]");
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (
+    "IntersectionObserver" in window &&
+    !prefersReducedMotion
+  ) {
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -192,11 +160,16 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach((element) => {
       revealObserver.observe(element);
     });
+  } else {
+    // Afficher le contenu si les animations sont indisponibles.
+    revealElements.forEach((element) => {
+      element.classList.add("is-visible");
+    });
   }
 
-  /* ---------------------------------------------------------
-     7. FAQ : UNE QUESTION OUVERTE À LA FOIS
-     --------------------------------------------------------- */
+
+  /* 06. FAQ : UNE SEULE RÉPONSE OUVERTE À LA FOIS
+     ========================================================= */
 
   const faqItems = document.querySelectorAll(".faq-item");
 
@@ -205,75 +178,56 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!item.open) return;
 
       faqItems.forEach((otherItem) => {
-        if (otherItem !== item && otherItem.open) {
+        if (otherItem !== item) {
           otherItem.open = false;
         }
       });
     });
   });
 
-  /* ---------------------------------------------------------
-     8. NAVIGATION INTERNE
-     --------------------------------------------------------- */
 
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  /* 07. LIENS INTERNES AVEC DÉFILEMENT FLUIDE
+     ========================================================= */
+
+  const internalLinks = document.querySelectorAll(
+    'a[href^="#"]:not([href="#"])'
+  );
+
+  internalLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
-      const href = link.getAttribute("href");
+      const targetId = link.getAttribute("href");
+      const target = document.querySelector(targetId);
 
-      if (!href || href === "#") return;
-
-      const target = document.getElementById(href.slice(1));
-
-      // Laisser le navigateur gérer les liens sans cible locale.
       if (!target) return;
 
       event.preventDefault();
 
       target.scrollIntoView({
-        behavior: reducedMotion ? "auto" : "smooth",
+        behavior: prefersReducedMotion ? "auto" : "smooth",
         block: "start"
       });
 
-      // Met à jour le fragment sans déclencher un saut de page.
-      if (window.location.hash !== href) {
-        window.history.pushState(null, "", href);
+      // Mettre à jour le fragment de l'URL sans saut brutal.
+      if (window.location.hash !== targetId) {
+        window.history.pushState(null, "", targetId);
       }
     });
   });
 
-  /* ---------------------------------------------------------
-     9. ANIMATION DES PROJETS AU SURVOL
-     --------------------------------------------------------- */
 
-  const projectVisuals = document.querySelectorAll(".project-visual");
+  /* 08. SÉCURITÉ : LIENS VERS DES ANCRES INEXISTANTES
+     ========================================================= */
 
-  projectVisuals.forEach((visual) => {
-    visual.addEventListener("pointermove", (event) => {
-      if (
-        reducedMotion ||
-        event.pointerType !== "mouse"
-      ) {
-        return;
-      }
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    const href = link.getAttribute("href");
 
-      const rect = visual.getBoundingClientRect();
-      const relativeX = (event.clientX - rect.left) / rect.width;
-      const relativeY = (event.clientY - rect.top) / rect.height;
+    if (!href || href === "#") return;
 
-      visual.style.setProperty(
-        "--pointer-x",
-        `${relativeX * 100}%`
+    if (!document.querySelector(href)) {
+      console.warn(
+        `Studio Racine : la cible "${href}" n'existe pas dans le HTML.`
       );
-
-      visual.style.setProperty(
-        "--pointer-y",
-        `${relativeY * 100}%`
-      );
-    });
-
-    visual.addEventListener("pointerleave", () => {
-      visual.style.removeProperty("--pointer-x");
-      visual.style.removeProperty("--pointer-y");
-    });
+    }
   });
+
 });
